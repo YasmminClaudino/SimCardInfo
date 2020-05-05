@@ -22,14 +22,17 @@ public class MainActivity extends AppCompatActivity {
         Button btn = (Button) findViewById(R.id.button);
         final TextView mccmnc = (TextView) findViewById(R.id.mccmnc);
         final TextView operadora = (TextView) findViewById(R.id.operadora);
+        final TextView state = (TextView) findViewById(R.id.state);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String stateValue = String.valueOf(tm.getSimState());
                 String plmn = tm.getNetworkOperator();
                 String operatorName = tm.getNetworkOperatorName();
                 mccmnc.setText(plmn);
                 operadora.setText(operatorName);
+                state.setText(stateValue);
 
             }
         });
