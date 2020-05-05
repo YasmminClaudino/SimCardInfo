@@ -27,12 +27,51 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String stateValue = String.valueOf(tm.getSimState());
+                Integer stateValue = tm.getSimState();
                 String plmn = tm.getNetworkOperator();
                 String operatorName = tm.getNetworkOperatorName();
                 mccmnc.setText(plmn);
                 operadora.setText(operatorName);
-                state.setText(stateValue);
+                switch (stateValue) {
+                    case 0:
+                        state.setText("UNKNOWN");
+                        break;
+                    case 1:
+                        state.setText("ABSENT");
+                        break;
+                    case 2:
+                        state.setText("PIN REQUIRED");
+                        break;
+                    case 3:
+                        state.setText("PUK REQUIRED");
+                        break;
+                    case 4:
+                        state.setText("NETWORKED LOCKED");
+                        break;
+                    case 5:
+                        state.setText("READY");
+                        break;
+                    case 6:
+                        state.setText("NOT READY");
+                        break;
+                    case 7:
+                        state.setText("PERM DISABLED");
+                        break;
+                    case 8:
+                        state.setText("CARD IO ERROR");
+                        break;
+                    case 9:
+                        state.setText("CARD RESTRICTED");
+                        break;
+
+                    case 10:
+                        state.setText("LOADED");
+                        break;
+                    case 11:
+                        state.setText("PRESENT");
+                        break;
+
+                }
 
             }
         });
