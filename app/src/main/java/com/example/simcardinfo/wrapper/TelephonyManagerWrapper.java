@@ -1,4 +1,4 @@
-package com.example.simcardinfo;
+package com.example.simcardinfo.wrapper;
 
 import android.telephony.TelephonyManager;
 
