@@ -17,8 +17,7 @@
             </intent-filter>
         </activity>
         <!-- receiver.SimCardReceiver é para indicar qual classe irá receber o receiver -->
-        <receiver android:name=".receiver.SimCardReceiver"
-                  android:exported="false">
+        <receiver android:name=".receiver.SimCardReceiver">
             <intent-filter>
                 <action android:name="com.example.simcardinfo.receiver.ACTION_SIM_STATE_CHANGED"/>
             </intent-filter>

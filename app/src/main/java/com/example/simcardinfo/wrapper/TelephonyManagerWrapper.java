@@ -4,6 +4,7 @@ import android.telephony.TelephonyManager;
 
 public class TelephonyManagerWrapper implements ITelephonyManager {
 
+    public static final String SIM_STATE_READY = "";
     private TelephonyManager tm;
 
     public TelephonyManagerWrapper(final TelephonyManager telephonyManager){
